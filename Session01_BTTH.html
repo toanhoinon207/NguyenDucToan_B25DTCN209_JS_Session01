@@ -1,29 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Session01_BTTH</title>
+    </head>
+    <body>
     <script>
         let name=prompt("Nhập tên sách:").trim().toUpperCase();
-        let author=prompt("Nhập tên tác giả").toUpperCase();
+        let author=prompt("Nhập tên tác giả").trim().toUpperCase();
         let year=Number(prompt("Nhập năm xuất bản:"));
         let price=Number(prompt("Nhập giá tiền một cuốn:"));
         let qty=Number(prompt("Nhập số lượng nhập kho:"));
-        let bookId=`${author.slice(0,3)}${year}-${Math.floor(Math.random()*1000+1)}`;
+        let bookId=`${author.slice(0,3)}${year}-${Math.floor(Math.random()*1000 + 1)}`;
         const now=new Date().getFullYear();
         let age=now-year;
         let sum=price*qty;
-        console.log("--- PHIẾU NHẬP KHO ---");
-        console.log(`Mã sách: ${bookId}`);
-        console.log(`Tên sách: ${name}`);
-        console.log(`Tác giả: ${author}`);
-        console.log(`Năm xuất bản: ${year}`);
-        console.log(`Tuổi sách: ${age}`);
-        console.log(`Tổng giá trị: ${sum} VNĐ`);
-        console.log(`Ngăn kệ gợi ý: ${Math.floor(Math.random()*10+1)}`);
-    </script>
-</body>
+        let shelf=Math.floor(Math.random()*10 + 1);
+        console.log(`
+--- PHIẾU NHẬP KHO ---
+Mã sách: ${bookId}
+Tên sách: ${name}
+Tác giả: ${author}
+Năm xuất bản: ${year}
+Tuổi sách: ${age}
+Tổng giá trị: ${sum} VNĐ
+Ngăn kệ gợi ý: ${shelf}
+        `);
+        </script>
+    </body>
 </html>
