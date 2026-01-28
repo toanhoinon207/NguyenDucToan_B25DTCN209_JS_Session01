@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Session01_BTVN06</title>
+    </head>
+    <body>
+        <script>
+            let name=prompt("Nhập tên sách:");
+            let order=Number(prompt("Nhập số thứ tự của sách trong thư viện:"));
+            let orgName=name;
+            name=name.trim().toUpperCase();
+            let iD=`LIB - ${name} - ${order}`;
+            console.log("Tên sách gốc: "+orgName);
+            console.log("Mã sách sau chuẩn hóa: "+iD);
+        </script>
+    </body>
+</html>
